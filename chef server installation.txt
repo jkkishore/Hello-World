@@ -1,0 +1,22 @@
+                                    ************* Steps to Install Chef Server **********************************
+  
+  
+   1. yum install -y wget curl
+   2. wget https://packages.chef.io/files/stable/chef-server/12.15.8/el/7/chef-server-core-12.15.8-1.el7.x86_64.rpm
+   3. chef-server-ctl reconfigure
+   4. rpm -ivh https://packages.chef.io/files/stable/chef-server/12.15.8/el/7/chef-server-core-12.15.8-1.el7.x86_64.rpm
+   5. chef-server-ctl start
+   6. chef-server-ctl enable
+   7. chef-server-ctl reconfigure
+   8. chef-server-ctl user-create vinod  vi raj rajuvnod@gmail.com 'raju' --filename vinod.pem
+   9. chef-server-ctl user-create vinodraj  vi raj rajuvnod@gmail.com 'viraju1234' --filename vinod.pem
+  10. systemctl status httpd
+  11. systemctl stop httpd   (if httpd is running)
+  12. chef-server-ctl install chef-manage
+  13. chef-server-ctl reconfigure
+  14. chef-manage-ctl reconfigure
+
+
+
+                                ************************* Steps to Install Chef Workstation ***************
+ 
