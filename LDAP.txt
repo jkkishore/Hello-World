@@ -1,0 +1,70 @@
+LDAP(Lightweight Directory Access Protocol):
+LDAP is a datastore( it stores data, mostly the user identities)
+It stores the data in a hierarchial format.
+
+Port No's: 389
+
+ It is a network protocol where all user account information is stored.
+
+LDAP contains only the user and grouping information. 
+
+
+Installation of openLDAP:
+#
+
+
+
+
+Note: slapd is a process
+
+
+Configuration of openLdap: slapd.conf is the config file, usually it will be located at /etc/oepnldap/slapd.conf
+# vi /etc/openldap/slapd.conf
+
+Note: The directory for ldap database configuration file is /var/openldap/openldap-data
+
+To check if the service is running or not
+#ps -ef | grep slapd
+
+To check the permission on the database config file
+#ls -l /var/openldap/openldap-data/
+
+To go into the directory of the database config file
+# cd /var/openldap/openldap-data
+#ls
+
+To check the openldap user(note: /etc/passwd this is the file where users are present)
+#grep openldap /etc/passwd
+
+
+To check the openldap group
+# grep openldap /etc/group
+
+To change the ownership for file
+#chown -R openldap:openldap /var/openldap/openldap-data
+
+-R stands for recursively
+
+To change the mod(permission) for that file
+#chmod -R 700 /var/openldap/openldap-data
+#ls -l /var/openldap/openldap-data
+
+
+Start slapd with the command
+#service ldap start
+
+Check the permission for /var/openldap
+#ls -l /var/openldap
+
+change the ownership for /var,openldap
+#chown -R openldap:openldap /var/openldap
+
+Run the following command to see if ldap is running or not
+#ps -ef | grep slapd
+
+
+
+
+
+
+
